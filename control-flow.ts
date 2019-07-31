@@ -1,10 +1,4 @@
-import "./scss/styles.scss";
-
-/**
- * If/else
- */
-
-let count = 50;
+let count:number = 50;
 if (count > 0) {
   count--;
 } else {
@@ -12,42 +6,28 @@ if (count > 0) {
 }
 console.log(count);
 
-/**
- * loop
- */
-
-console.log("for loop");
-
-const keys = "abcdef";
-for (let idx = 0; idx < keys.length; ++idx) {
-  console.log(keys[idx]);
+const keys:string="abcdef";
+for (let i = 0; i < keys.length; i++) {
+  console.log(keys[i]);
 }
 
-console.log("while loop");
-let idx = 0;
-while (idx < keys.length) {
-  console.log(keys[idx]);
-  ++idx;
+console.log("While loop")
+let i = 0;
+while (i < keys.length) {
+  console.log(keys[i]);
+  i++;
 }
 
-console.log("do-while loop");
-
-idx = 0;
-do {
-  console.log(keys[idx]);
-  ++idx;
-} while (idx < keys.length);
-
-console.log("for-of loop");
+console.log("for-of loop")
 for (const item of keys) {
   console.log(item);
 }
-
-console.log("for-in loop");
+console.log("for-in loop")
 const user = {
-  name: 'Bob',
+  name:"Bob",
   age: 55
-};
-for (const key in user) {
-  console.log(`${key}: ${user[key]}`);
+}
+for(var key in user){
+  // @ts-ignore
+  console.log(key+": "+user[key])
 }
